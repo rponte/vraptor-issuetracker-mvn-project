@@ -24,34 +24,24 @@
 			<groupId>br.com.caelum</groupId>
 			<artifactId>vraptor</artifactId>
 			<version>3.5.0</version>
-			<!-- 
 			<exclusions>
 				<exclusion>
-					<groupId>org.jmock</groupId>
-					<artifactId>org.jmock</artifactId>
+					<groupId>com.google.inject</groupId>
+					<artifactId>guice</artifactId>
 				</exclusion>
 				<exclusion>
-					<groupId>org.springframework</groupId>
-					<artifactId>org.springframework</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>jfree</groupId>
-					<artifactId>jfree</artifactId>
+					<groupId>com.google.inject.extensions</groupId>
+					<artifactId>guice-multibindings</artifactId>
 				</exclusion>
 				<exclusion>
 					<groupId>aopalliance</groupId>
 					<artifactId>aopalliance</artifactId>
 				</exclusion>
 				<exclusion>
-					<groupId>org.aspectj</groupId>
-					<artifactId>org.aspectj</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>qdox</groupId>
-					<artifactId>qdox</artifactId>
+					<groupId>javax.inject</groupId>
+					<artifactId>javax.inject</artifactId>
 				</exclusion>
 			</exclusions>
-			 -->
 		</dependency>
 		<dependency>
 			<groupId>jstl</groupId>
