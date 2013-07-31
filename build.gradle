@@ -1,0 +1,87 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "com.github.marceloemanoel:gradle-migrations:0.2"
+    }
+}
+apply plugin: "migrations"
+apply plugin: "eclipse-wtp"
+apply plugin: "war"
+ 
+archivesBaseName = "issuetracker"
+version = "0.0.1-SNAPSHOT"
+group = "br.com.triadworks.issuetracker"
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
+
+migrations {
+    baseDir = "src/main/migrations"
+}
+
+repositories {
+    mavenCentral()
+}
+
+def springModules = ["spring-core", "spring-context",
+    "spring-context-support","spring-test",
+    "spring-aop", "spring-aspects",
+    "spring-tx", "spring-beans",
+    "spring-expression", "spring-jdbc",
+    "spring-orm", "spring-asm",
+    "spring-web"]
+
+def sl4jModules = ["slf4j-api", "jul-to-slf4j", "log4j-over-slf4j", "jcl-over-slf4j"]
+
+dependencies {
+
+    springModules.each {
+        compile "org.springframework:${it}:3.1.4.RELEASE"
+    }
+    sl4jModules.each {
+        compile "org.slf4j:${it}:1.7.5"
+    }
+    compile("br.com.caelum:vraptor:3.5.1") {
+        exclude(group: "com.google.inject")
+        exclude(group: "com.google.inject.extensions")
+        exclude(group: "aopalliance")
+        exclude(group: "javax.inject")
+        exclude(group: "org.apache.commons-logging")
+    }
+
+    migrationsDriver 'mysql:mysql-connector-java:5+'
+    
+    compile "jstl:jstl:1.2"
+    compile "cglib:cglib-nodep:2.2.2"
+    compile "javassist:javassist:3.12.1.GA"
+    compile "aopalliance:aopalliance:1.0"
+    compile "org.aspectj:aspectjrt:1.7.0"
+    compile "org.aspectj:aspectjweaver:1.7.0"
+    compile "org.hibernate:hibernate-entitymanager:3.6.10.Final"
+    compile "postgresql:postgresql:9.1-901.jdbc4"
+    compile "com.mchange:c3p0:0.9.5-pre3"
+    compile "opensymphony:sitemesh:2.4.2"
+
+    providedCompile "javax.servlet:javax.servlet-api:3.0.1"
+    providedCompile "javax.servlet.jsp:javax.servlet.jsp-api:2.2.1"
+
+    testCompile "junit:junit:4.11"
+    testCompile "org.mockito:mockito-all:1.9.0"
+    testCompile "org.dbunit:dbunit:2.4.9"
+}
+
+tasks.withType(Compile) {
+    options.debug = true
+    options.debugOptions.debugLevel = "source,lines,vars"
+    options.encoding = "UTF-8"
+}
+
+processResources << {
+    println "antes do proccess resources"
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = "1.6"
+}
