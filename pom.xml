@@ -262,7 +262,6 @@
             				<!-- For front-end/web modules -->
 						<jst.java>${props.compile.jdk.source}</jst.java>
 						<jst.web>3.0</jst.web>
-						<jst.jaxrs>1.1</jst.jaxrs>
 						<!-- For back-end modules, replace the above by  -->
              			<!-- jst.ejb>3.1</jst.ejb -->
             			</additionalProjectFacets>
