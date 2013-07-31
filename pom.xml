@@ -242,6 +242,8 @@
 					<source>${props.compile.jdk.source}</source>
 					<target>${props.compile.jdk.target}</target>
 					<encoding>UTF-8</encoding>
+					<debug>true</debug>
+					<debuglevel>vars,lines,source</debuglevel>
 				</configuration>
 		    </plugin>
 			<plugin>
