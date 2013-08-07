@@ -231,7 +231,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>issuetracker</finalName>
+		<finalName>vraptor-issuetracker</finalName>
 		<plugins>
 			<!-- Set to compile using JDK 7 -->
 		    <plugin>
