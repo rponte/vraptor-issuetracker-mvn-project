@@ -34,6 +34,7 @@ Gerando .war da aplicação
 ```BASH
 $ mvn package
 ```
+
 2. Após ter executado o comando acima, o `.war` será gerado em `/target/vraptor-issuetracker.war`;
 
 Informações adicionais
