@@ -19,7 +19,7 @@ Os passos básicos são:
 $ mvn eclipse:clean eclipse:eclipse
 ```
 
-2. Importe o projeto no [Eclipse Java EE IDE for Web Developers (Juno)](http://www.eclipse.org/downloads/) ou superior; 
+2. Importe o projeto no [Eclipse Java EE IDE for Web Developers (Kepler)](http://www.eclipse.org/downloads/) ou superior; 
 3. Adicione o JDBC Driver no diretório `/WebContent/WEB-INF/lib` caso não pretenda utilizar o `PostgreSQL`;
 4. Configure as informações do banco no arquivo `src/jdbc.properties`;
 5. Crie o banco de dados `issuetracker` com a ferramenta de sua preferência (como o `PGAdmin`, no caso do `PostgreSQL`);
