@@ -3,7 +3,7 @@ VRaptor Issue Tracker Project
 
 Projeto simples de uma aplicação de Issue Tracker com `VRaptor 3.5.0`, `Spring 3.x` e `Hibernate 3.6.x (JPA2)` com o objetivo de explanar as principais features de cada tecnologia e como integra-las de maneira produtiva em um projeto real. O projeto é construído durante os cursos e treinamentos de **VRaptor, Spring e Hibernate** ministrados pela [TriadWorks](http://www.triadworks.com.br).
 
-Projeto configurado com Maven 3 para facilitar a configuração no Eclipse.
+* Projeto configurado com Maven 3 para facilitar a configuração no Eclipse.
 
 Caso tenha interesse ou alguma dúvida nos nossos cursos e treinamentos, por favor, [deixe-nos saber](http://www.triadworks.com.br/contatos.html).
 
@@ -31,9 +31,9 @@ $ mvn eclipse:clean eclipse:eclipse
 Gerando .war da aplicação
 ------------------------
 1. Para gerar o `.war` da aplicação basta executar o comando do Maven no Eclipse ou na linha de comando:
-
-  	$ mvn package
-
+```BASH
+$ mvn package
+```
 2. Após ter executado o comando acima, o `.war` será gerado em `/target/vraptor-issuetracker.war`;
 
 Informações adicionais
