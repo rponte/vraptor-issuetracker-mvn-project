@@ -20,7 +20,7 @@ $ mvn eclipse:clean eclipse:eclipse
 ```
 
 2. Importe o projeto no [Eclipse Java EE IDE for Web Developers (Kepler)](http://www.eclipse.org/downloads/) ou superior; 
-3. Adicione o JDBC Driver no diretório `/WebContent/WEB-INF/lib` caso não pretenda utilizar o `PostgreSQL`;
+3. Adicione o JDBC Driver como dependência no `pom.xml` caso não pretenda utilizar o `PostgreSQL`;
 4. Configure as informações do banco no arquivo `src/jdbc.properties`;
 5. Crie o banco de dados `issuetracker` com a ferramenta de sua preferência (como o `PGAdmin`, no caso do `PostgreSQL`);
 6. Faça o deploy no `Apache Tomcat 7.x` e inicie o servidor;
@@ -41,9 +41,6 @@ Informações adicionais
 ------------------------
 
 * O schema do banco de dados, `issuetracker`, será criado pelo `Hibernate` ao iniciar a aplicação pela primeira vez;
-* Dentro do diretório `/etc/lib` você encontra todas as libs e dependências organizadas de cada framework;
-* Dentro do diretório `/etc/lib/jdbc-drivers` é possível encontrar alguns drivers já disponíveis, como `MySQL`, `PostgreSQL` e `Oracle`;
-* Dentro do diretório `/etc/mockups` você encontra os mockups (esboços) das telas da aplicação;
 * O design da aplicação foi construído e totalmente baseado no [Bootstrap v2.2.1 do Twitter](http://twitter.github.io/bootstrap/);
 * Alguns screenshots da aplicação rodando podem ser vistos em: [listagem de issues](http://twitpic.com/b79qri/full) e [edição de usuário](http://twitpic.com/b79p9c/full);
 
